@@ -1,0 +1,354 @@
+:root {
+  --primary-green: #0d5c3a;
+  --accent-green: #107c41;
+  --student-color: #2e7d32;
+  --faculty-color: #1565c0;
+  --admin-color: #6a1b9a;
+  --bg-light: #f8fafc;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+  height: 105px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  border-bottom: 3px solid #d9e2f3;
+  background-color: white;
+}
+
+.logo-group {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.brand-badge {
+  width: 65px;
+  height: 65px;
+  background: #b51e1e;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+university-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--primary-green);
+}
+
+.sub-dept {
+  font-size: 18px;
+  font-weight: 800;
+  color: #a61ca6;
+  margin-top: 6px;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 18px;
+}
+
+.btn-primary {
+  background-color: var(--primary-green);
+  color: white;
+  border: 1px solid var(--primary-green);
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary {
+  background-color: white;
+  color: var(--primary-green);
+  border: 1px solid var(--primary-green);
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-green);
+}
+
+.btn-secondary:hover {
+  background-color: #e8f5e9;
+}
+
+.hero-banner {
+  background-color: var(--primary-green);
+  min-height: calc(100vh - 105px);
+  padding: 55px 20px;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+module-tag {
+  display: inline-block;
+  background-color: var(--accent-green);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.module-tag {
+  display: inline-block;
+  background-color: var(--accent-green);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.hero-banner h1 {
+  font-size: 42px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 20px;
+  color: white;
+  margin-bottom: 22px;
+}
+
+.hero-cta-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn-hero-primary {
+  background-color: white;
+  color: var(--primary-green);
+  border: none;
+  padding: 12px 22px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.btn-hero-primary:hover {
+  background-color: #e8f5e9;
+  transform: translateY(-2px);
+}
+
+.campus-highlights {
+  padding: 40px 20px;
+  background-color: white;
+}
+
+.campus-highlights h2 {
+  font-size: 30px;
+  color: #111;
+  margin-bottom: 12px;
+}
+
+.campus-highlights p {
+  font-size: 17px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.campus-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    height: auto;
+    padding: 15px 20px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .logo-group {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .brand-badge {
+    width: 55px;
+    height: 55px;
+    font-size: 16px;
+  }
+
+  university-name {
+    font-size: 20px;
+  }
+
+  .sub-dept {
+    font-size: 15px;
+  }
+
+  .nav-actions {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 9px 18px;
+    font-size: 14px;
+  }
+
+  .hero-banner {
+    min-height: calc(100vh - 150px);
+    padding: 50px 20px;
+  }
+
+  .hero-banner h1 {
+    font-size: 32px;
+  }
+
+  .subtitle {
+    font-size: 17px;
+  }
+
+  .hero-cta-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn-hero-primary {
+    background: white;
+    color: var(--primary-green);
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    text-decoration: none;
+    width: fit-content;
+  }
+}
+.btn-hero-secondary {
+  background-color: var(--primary-green);
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+.section-container {
+  padding: 40px 20px;
+  background-color: var(--bg-light);
+}
+.big-light {background-color: var(--big-light);}
+
+.section-tittle {
+  font-size: 1.8rem;
+  color: var(--primary-green);
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: var(--primary-green);
+  margin-bottom: 1.5rem;
+}
+
+.student-border { border-colour: var(--student-color); }
+.faculty-border { border-colour: var(--faculty-color); }
+.admin-border { border-colour: var(--admin-color); }
+
+.role-icon {font-size: 2rem; margin-bottom: 0.5rem;}
+
+
+.carousel-wrapper {
+  position: relative;
+  max-width: 908px;
+}
+
+.carousel-track-container{
+  over-flow: hidden;
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.slide-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right:0;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 4px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: var(--primary-green);
+  width: 24px;
+}
+
