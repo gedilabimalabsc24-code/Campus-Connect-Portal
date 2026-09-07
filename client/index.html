@@ -138,9 +138,61 @@
 
     </div>
 
+    <div class="carousel-dots" id="carouselDots">
+      <span class="dot active-dot" data-index="0"></span>
+      <span class="dot" data-index="1"></span>
+      <span class="dot" data-index="2"></span>
+    </div>
+
   </section>
 
-  <div id="auth-root"></div>
+  <section id="roles" class="section-container bg-light">
+    <h2 class="section-title">Choose Your Portal View</h2>
+
+    <div class="roles-grid">
+      <article class="role-card student-border">
+        <div class="role-icon">👨‍🎓</div>
+        <h3>Student Portal</h3>
+        <ul class="feature-bullets">
+          <li>View Notices &amp; Events</li>
+          <li>Submit Assignments</li>
+          <li>Track Attendance</li>
+          <li>Update Profile</li>
+        </ul>
+        <button class="btn-portal student-bg">Access Student View</button>
+      </article>
+
+      <article class="role-card faculty-border">
+        <div class="role-icon">👨‍🏫</div>
+        <h3>Faculty Portal</h3>
+        <ul class="feature-bullets">
+          <li>Post Notices &amp; Events</li>
+          <li>Create Assignments</li>
+          <li>Mark Attendance</li>
+          <li>View Submissions</li>
+        </ul>
+        <button class="btn-portal faculty-bg">Access Faculty View</button>
+      </article>
+
+      <article class="role-card admin-border">
+        <div class="role-icon">🛡️</div>
+        <h3>Admin Portal</h3>
+        <ul class="feature-bullets">
+          <li>Manage Users</li>
+          <li>Manage Notices &amp; Events</li>
+          <li>View System Reports</li>
+          <li>System Settings</li>
+        </ul>
+        <button class="btn-portal admin-bg">Access Admin View</button>
+      </article>
+    </div>
+  </section>
+
+  <section id="auth-section">
+    <div id="auth-root"></div>
+  </section>
+
+  <script type="module" src="./src/main.jsx"></script>
 
 </body>
 

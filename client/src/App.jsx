@@ -1,20 +1,37 @@
 import { useEffect, useState } from "react";
 import "./style.css";
-import AuthModule from "./AuthModule";
+import AuthModule from "./components/AuthModule.jsx";
+import StudentsPortal from "./components/StudentsPortal.jsx";
 
 export default function App() {
-  const [activeView, setActiveView] = useState("student");
+  const [activeView, setActiveView] = useState("auth");
+  const [activeTab, setActiveTab] = useState("login");
+
+  const scrollToAuth = () => {
+    document.getElementById("auth-section")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
 
   useEffect(() => {
     const handleHashChange = () => {
       const hash = window.location.hash;
 
-      if (hash === "#auth") {
+      if (hash === "#login" || hash === "#auth") {
         setActiveView("auth");
+        setActiveTab("login");
+        scrollToAuth();
+      } else if (hash === "#register") {
+        setActiveView("auth");
+        setActiveTab("signup");
+        scrollToAuth();
+      } else if (hash === "#student") {
+        setActiveView("student");
+        scrollToAuth();
       } else if (hash === "#admin") {
         setActiveView("admin");
-      } else {
-        setActiveView("student");
+        scrollToAuth();
       }
     };
 
@@ -30,32 +47,21 @@ export default function App() {
   return (
     <div style={{ padding: "20px 0" }}>
       {activeView === "student" ? (
-        <div>
-          <h1>Student</h1>
-
-          <button
-            onClick={() => {
-              window.location.hash = "#auth";
-            }}
-          >
-            Login / Sign Up
-          </button>
-        </div>
+        <StudentsPortal />
       ) : activeView === "admin" ? (
         <div>
           <h1>Admin</h1>
-
           <button
             onClick={() => {
-              window.location.hash = "";
+              window.location.hash = "#login";
             }}
           >
-            Back
+            Back to Login
           </button>
         </div>
       ) : (
         <div id="auth-section">
-          <AuthModule />
+          <AuthModule initialMode={activeTab} />
         </div>
       )}
     </div>
